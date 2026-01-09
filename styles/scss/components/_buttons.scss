@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as v;
+.btn-primary {
+  padding: 12px 24px;
+  background: v.$primary-color;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}

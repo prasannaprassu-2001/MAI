@@ -1,0 +1,297 @@
+.container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.top-header {
+  background: #003F6B;
+  height: 111px;
+  width: 100%;
+  padding: 20px 100px;
+  color: #fff;
+  align-items: center;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 124px;
+  height: 71px;
+  object-fit: contain;
+  opacity: 1;
+}
+
+
+.help-box {
+  width: 324px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 7px 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.help-box span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  color: #333333;
+  ;
+}
+
+.help-box .icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.help-box .icon {
+  width: 35px;
+  height: 35px;
+  padding: 0 8px;
+  border-radius: 50px;
+  background: rgba(0, 63, 107, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.sign-in-btn {
+  width: 137px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 30px 8px 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.user-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon img {
+  width: 34px;
+  height: 35px;
+}
+
+.main-nav {
+  width: 100%;
+  height: 62px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.main-nav .container {
+  height: 100%;
+  padding: 16px 100px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #003f6b;
+  text-decoration: none;
+  position: relative;
+  opacity: 1;
+}
+
+.nav-links a.active:hover {
+  color: #4daff6;
+
+}
+
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-actions .action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav-actions .action-icon {
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: contain;
+}
+
+.nav-actions .divider {
+  width: 1px;
+  height: 30px;
+  background: #003f6b;
+  opacity: 1;
+}
+
+/* =================== LAPTOP (≤1200px) =================== */
+@media (max-width: 1200px) {
+  .top-header {
+    padding: 20px 60px;
+  }
+
+  .main-nav .container {
+    padding: 16px 60px;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+}
+
+/* =================== TABLET (≤992px) =================== */
+@media (max-width: 992px) {
+  .top-header {
+    height: auto;
+    padding: 20px 40px;
+  }
+
+  .help-box {
+    display: none;
+  }
+
+  .sign-in-btn {
+    padding: 8px 20px;
+  }
+
+  .main-nav .container {
+    padding: 14px 40px;
+  }
+
+  .nav-links {
+    gap: 18px;
+
+    a {
+      font-size: 15px;
+    }
+  }
+}
+
+/* =================== TABLET / MOBILE (≤768px) =================== */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 16px 24px;
+  }
+
+  .top-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .logo img {
+    width: 110px;
+    height: auto;
+  }
+
+  .sign-in-btn {
+    align-self: flex-end;
+  }
+
+  .main-nav {
+    height: auto;
+  }
+
+  .main-nav .container {
+    padding: 12px 0;
+  }
+
+  .nav-links {
+    padding: 0 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .nav-actions {
+    display: none;
+  }
+}
+
+/* =================== MOBILE (≤576px) =================== */
+@media (max-width: 576px) {
+  .top-header {
+    padding: 14px 16px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .sign-in-btn {
+    width: auto;
+    height: 44px;
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+/* =================== SMALL MOBILE (≤400px) =================== */
+@media (max-width: 400px) {
+  .sign-in-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+}
